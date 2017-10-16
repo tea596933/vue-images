@@ -16,8 +16,7 @@
       </div>
       <img ref="images" class="image animated" v-for="item in images" :src="item.imageUrl" v-show="item.index===index+1" @click.stop="addIndex">
       <div class="footer">
-        <span class="title" @click.stop="" v-show="showtitle" v-html="images[index].title + ' - '"></span>
-        <span class="caption" @click.stop="" v-show="showcaption" v-html="images[index].caption"></span>
+        <span class="caption" @click.stop="">{{ titleCaption }}</span>
         <span class="count" @click.stop="" v-show="showimagecount">{{ index+1 }} {{imagecountseparator}} {{ images[index].total }}</span>
       </div>
     </div>
@@ -54,6 +53,19 @@
         animation: false,
         isFullScreen: document.fullScreen || document.mozFullScreen || document.webkitIsFullScreen,
         isPlay: false
+      }
+    },
+    computed: {
+      titleCaption () {
+        if (this.showtitle && this.showcaption) {
+          return `${this.images[this.index].title} - ${this.images[this.index].caption}`
+        } else if (this.showtitle) {
+          return this.images[this.index].title
+        } else if (this.showcaption) {
+          return this.images[this.index].caption
+        } else {
+          return ''
+        }
       }
     },
     created () {
