@@ -209,14 +209,14 @@
           display: inline-block
           font-size: 14px
           color: #fff
+          margin-bottom: 0px
           a
             color: #fff
             &:hover
               color: #888
         .count
-          position: absolute
           font-size: 14px
-          right: 0
+          float: right
     .arrow
       display: inline-block
       position: absolute
