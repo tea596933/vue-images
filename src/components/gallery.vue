@@ -1,6 +1,7 @@
 <template>
   <div class="gallery">
     <div class="wrapper" v-for="(item, index) in images">
+      <span class="title" v-show="showtitle" v-html="item.title"></span>
       <img :src="item.imageUrl" @click="setActive(index)">
       <span class="caption" v-show="showcaption" v-html="item.caption"></span>
     </div>
@@ -11,7 +12,8 @@
   export default {
     props: {
       images: Array,
-      showcaption: Boolean
+      showcaption: Boolean,
+      showtitle: Boolean
     },
     methods: {
       setActive (idx) {
