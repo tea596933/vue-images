@@ -43,7 +43,7 @@
         display: inline-block
         font-size: 14px
         color: #000
-        margin-bottom: 10px
+        margin-bottom: 0px
         a
           color: #000
           &:hover
