@@ -1,7 +1,8 @@
 <template>
   <div class="gallery">
     <div class="wrapper" v-for="(item, index) in images">
-      <img :data-src="item.imageUrl" class="lazyload" @click="setActive(index)">
+      <img :src="item.imageUrl" @click="setActive(index)">
+      <span class="caption" v-show="showcaption" v-html="item.caption"></span>
     </div>
   </div>
 </template>
@@ -9,7 +10,8 @@
 <script type="text/ecmascript-6">
   export default {
     props: {
-      images: Array
+      images: Array,
+      showcaption: Boolean
     },
     methods: {
       setActive (idx) {
@@ -22,7 +24,7 @@
 <style lang="stylus" rel="stylesheet/stylus" scoped>
   .gallery
     display: flex
-    flex-wrap: wrap
+    overflow: auto
     .wrapper
       flex: 1
       box-sizing: border-box
@@ -35,4 +37,12 @@
         border-radius: 2px
         cursor: pointer
         overflow: hidden
+      span
+        display: inline-block
+        font-size: 14px
+        color: #000
+        a
+          color: #000
+          &:hover
+            color: #888
 </style>

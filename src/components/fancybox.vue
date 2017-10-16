@@ -14,7 +14,7 @@
           <icon :type="'close'" :color="'#ccc'"></icon>
         </div>
       </div>
-      <img ref="images" class="image animated lazyload" v-for="item in images" :data-src="item.imageUrl" v-show="item.index===index+1" @click.stop="addIndex">
+      <img ref="images" class="image animated" v-for="item in images" :src="item.imageUrl" v-show="item.index===index+1" @click.stop="addIndex">
       <div class="footer">
         <span class="caption" @click.stop="" v-show="showcaption" v-html="images[index].caption"></span>
         <span class="count" @click.stop="" v-show="showimagecount">{{ index+1 }} {{imagecountseparator}} {{ images[index].total }}</span>
@@ -202,6 +202,7 @@
         position: relative
         padding: 5px
         text-align: left
+        background: #000
         span
           display: inline-block
           font-size: 14px
