@@ -202,7 +202,7 @@
         user-select: none
       .footer
         position: relative
-        padding: 5px
+        padding: 5px 16px
         text-align: left
         background: #000
         span
@@ -215,7 +215,7 @@
               color: #888
         .count
           position: absolute
-          font-size: 12px
+          font-size: 14px
           right: 0
     .arrow
       display: inline-block
