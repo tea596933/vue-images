@@ -3,7 +3,8 @@
     <div class="wrapper" v-for="(item, index) in images">
       <span class="title" v-show="showtitle" v-html="item.title"></span>
       <img :src="item.imageUrl" @click="setActive(index)">
-      <span class="caption" v-show="showcaption" v-html="item.caption"></span>
+      <p><span class="caption" v-show="showcaption" v-html="item.caption"></span></p>
+      <input type="button" v-show="showbutton" :value="buttonstring" @click="buttonfunction"></input>
     </div>
   </div>
 </template>
@@ -13,7 +14,10 @@
     props: {
       images: Array,
       showcaption: Boolean,
-      showtitle: Boolean
+      showtitle: Boolean,
+      showbutton: Boolean,
+      buttonstring: String,
+      buttonfunction: Function
     },
     methods: {
       setActive (idx) {
@@ -48,4 +52,6 @@
           color: #000
           &:hover
             color: #888
+      input
+        font-size: 14px
 </style>
