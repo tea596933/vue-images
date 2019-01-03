@@ -6,7 +6,7 @@ import lightbox from './lightbox'
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  template: '<lightbox :imgs="images" :modalclose="modalclose" :keyinput="keyinput" :mousescroll="mousescroll" :showclosebutton="showclosebutton" :showcaption="showcaption" :imagecountseparator="imagecountseparator" :showimagecount="showimagecount" :showthumbnails="showthumbnails"/>',
+  template: '<lightbox :imgs="images" :modalclose="modalclose" :keyinput="keyinput" :mousescroll="mousescroll" :showclosebutton="showclosebutton" :showcaption="showcaption" :imagecountseparator="imagecountseparator" :showimagecount="showimagecount" :showthumbnails="showthumbnails" :showbutton="showbutton" :buttonstring="buttonstring"/>',
   data () {
     return {
       images: [
@@ -16,7 +16,7 @@ new Vue({
         },
         {
           imageUrl: 'https://images.unsplash.com/photo-1455717974081-0436a066bb96?dpr=2&auto=format&w=1024',
-          caption: 'Photo by 2'
+          caption: '<b>Photo</b> by 2'
         },
         {
           imageUrl: 'https://images.unsplash.com/photo-1460899960812-f6ee1ecaf117?dpr=2&auto=format&w=1024',
@@ -58,7 +58,9 @@ new Vue({
       showcaption: true,
       imagecountseparator: 'of',
       showimagecount: true,
-      showthumbnails: true
+      showthumbnails: true,
+      showbutton: true,
+      buttonstring: 'haha'
     }
   },
   components: {

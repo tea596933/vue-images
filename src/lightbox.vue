@@ -2,8 +2,7 @@
   <div class="vue-images">
     <gallery :images="images" @changeIndex="changeImg($event)"
       :showcaption="showcaption" :showtitle="showtitle"
-      :showbutton="showbutton" :buttonstring="buttonstring" 
-      :buttonfunction="buttonfunction"></gallery>
+      :showbutton="showbutton" :buttonstring="buttonstring"></gallery>
     <div ref="lightbox" class="lightbox" v-show="isShow" @click="isShow=!modalclose">
       <fancybox ref="fancybox" :images="images" :index="index" :reset="!isShow"
         @play="playImg" @pause="pauseImg" @close="closeImg" @addIndex="nextImg"
@@ -36,8 +35,7 @@
       showimagecount: Boolean,
       showthumbnails: Boolean,
       showbutton: Boolean,
-      buttonstring: String,
-      buttonfunction: Function
+      buttonstring: String
     },
     computed: {
       images () {
