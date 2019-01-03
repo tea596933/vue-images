@@ -4,7 +4,7 @@
       <span class="title" v-show="showtitle" v-html="item.title"></span>
       <img :src="item.imageUrl" @click="setActive(index)">
       <p><span class="caption" v-show="showcaption" v-html="item.caption"></span></p>
-      <input :id="index" type="button" v-show="showbutton" :value="buttonstring"></input>
+      <button ref="writeGrading" :id="index" v-show="showbutton" :value="buttonstring"></button>
     </div>
   </div>
 </template>
@@ -23,6 +23,9 @@
         this.$emit('changeIndex', idx)
       }
     }
+    // mounted () {
+    //   console.log(this.$refs.bringGrading)
+    // }
   }
 </script>
 

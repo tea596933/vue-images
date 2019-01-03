@@ -65,5 +65,8 @@ new Vue({
   },
   components: {
     lightbox
+  },
+  mounted () {
+    console.log(this.$children[0].$children[0].$refs.writeGrading)
   }
 })
