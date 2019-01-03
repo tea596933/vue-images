@@ -16,7 +16,7 @@
       </div>
       <img ref="images" class="image animated" v-for="item in images" :src="item.imageUrl" v-show="item.index===index+1" @click.stop="addIndex">
       <div class="footer">
-        <span class="caption" @click.stop="">{{ titleCaption }}</span>
+        <span class="caption" @click.stop="" v-html="titleCaption"></span>
         <span class="count" @click.stop="" v-show="showimagecount">{{ index+1 }} {{imagecountseparator}} {{ images[index].total }}</span>
       </div>
     </div>
