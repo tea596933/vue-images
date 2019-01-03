@@ -4,7 +4,7 @@
       <span class="title" v-show="showtitle" v-html="item.title"></span>
       <img :src="item.imageUrl" @click="setActive(index)">
       <p><span class="caption" v-show="showcaption" v-html="item.caption"></span></p>
-      <input type="button" v-show="showbutton" :value="buttonstring" @click="buttonfunction"></input>
+      <input :name="index" type="button" v-show="showbutton" :value="buttonstring" @click="buttonfunction"></input>
     </div>
   </div>
 </template>
