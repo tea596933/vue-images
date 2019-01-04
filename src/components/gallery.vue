@@ -4,7 +4,7 @@
       <span class="title" v-show="showtitle" v-html="item.title"></span>
       <img :src="item.imageUrl" @click="setActive(index)">
       <p><span class="caption" v-show="showcaption" v-html="item.caption"></span></p>
-      <button ref="writeGrading" :id="index" v-show="showbutton" :value="buttonstring"></button>
+      <button ref="writeGrading" v-show="showbutton" @click="$emit('buttonfunction', index)">{{ buttonstring }}</button>
     </div>
   </div>
 </template>

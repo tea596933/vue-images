@@ -2,7 +2,8 @@
   <div class="vue-images">
     <gallery :images="images" @changeIndex="changeImg($event)"
       :showcaption="showcaption" :showtitle="showtitle"
-      :showbutton="showbutton" :buttonstring="buttonstring"></gallery>
+      :showbutton="showbutton" :buttonstring="buttonstring"
+      @buttonfunction="buttonfunction"></gallery>
     <div ref="lightbox" class="lightbox" v-show="isShow" @click="isShow=!modalclose">
       <fancybox ref="fancybox" :images="images" :index="index" :reset="!isShow"
         @play="playImg" @pause="pauseImg" @close="closeImg" @addIndex="nextImg"
@@ -196,6 +197,9 @@
             }, 375)
           }
         }
+      },
+      buttonfunction (idx) {
+        this.$emit('buttonfunction', idx)
       }
     },
     watch: {

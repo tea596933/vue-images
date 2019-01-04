@@ -6,7 +6,7 @@ import lightbox from './lightbox'
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  template: '<lightbox :imgs="images" :modalclose="modalclose" :keyinput="keyinput" :mousescroll="mousescroll" :showclosebutton="showclosebutton" :showcaption="showcaption" :imagecountseparator="imagecountseparator" :showimagecount="showimagecount" :showthumbnails="showthumbnails" :showbutton="showbutton" :buttonstring="buttonstring"/>',
+  template: '<lightbox :imgs="images" :modalclose="modalclose" :keyinput="keyinput" :mousescroll="mousescroll" :showclosebutton="showclosebutton" :showcaption="showcaption" :imagecountseparator="imagecountseparator" :showimagecount="showimagecount" :showthumbnails="showthumbnails" :showbutton="showbutton" :buttonstring="buttonstring" @buttonfunction="buttonfunction"/>',
   data () {
     return {
       images: [
@@ -67,6 +67,10 @@ new Vue({
     lightbox
   },
   mounted () {
-    console.log(this.$children[0].$children[0].$refs.writeGrading)
+  },
+  methods: {
+    buttonfunction (idx) {
+      console.log('show ', idx)
+    }
   }
 })
