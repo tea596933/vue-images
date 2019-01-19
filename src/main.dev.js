@@ -6,7 +6,7 @@ import lightbox from './lightbox'
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  template: '<lightbox :imgs="images" :modalclose="modalclose" :keyinput="keyinput" :mousescroll="mousescroll" :showclosebutton="showclosebutton" :showcaption="showcaption" :imagecountseparator="imagecountseparator" :showimagecount="showimagecount" :showthumbnails="showthumbnails" :showbutton="showbutton" :buttonstring="buttonstring" @buttonfunction="buttonfunction"/>',
+  template: '<lightbox :imgs="images" :modalclose="modalclose" :keyinput="keyinput" :mousescroll="mousescroll" :showclosebutton="showclosebutton" :showcaption="showcaption" :imagecountseparator="imagecountseparator" :showimagecount="showimagecount" :showthumbnails="showthumbnails" :showbutton="showbutton" :buttononestring="buttononestring" :buttontwostring="buttontwostring" @buttononefunction="buttononefunction" @buttontwofunction="buttontwofunction"/>',
   data () {
     return {
       images: [
@@ -60,7 +60,8 @@ new Vue({
       showimagecount: true,
       showthumbnails: true,
       showbutton: true,
-      buttonstring: 'haha'
+      buttononestring: 'haha1',
+      buttontwostring: 'haha2'
     }
   },
   components: {
@@ -69,8 +70,11 @@ new Vue({
   mounted () {
   },
   methods: {
-    buttonfunction (idx) {
-      console.log('show ', idx)
+    buttononefunction (idx) {
+      console.log('show fcn 1 result:', idx)
+    },
+    buttontwofunction (idx) {
+      console.log('show fcn 2 result:', idx)
     }
   }
 })

@@ -4,7 +4,8 @@
       <span class="title" v-show="showtitle" v-html="item.title"></span>
       <img :src="item.imageUrl" @click="setActive(index)">
       <p><span class="caption" v-show="showcaption" v-html="item.caption"></span></p>
-      <button ref="writeGrading" v-show="showbutton" @click="$emit('buttonfunction', index)">{{ buttonstring }}</button>
+      <button ref="writeGrading" v-show="showbutton" @click="$emit('buttononefunction', index)">{{ buttononestring }}</button>
+      <button ref="deleteImage" v-show="showbutton" @click="$emit('buttontwofunction', index)">{{ buttontwostring }}</button>
     </div>
   </div>
 </template>
@@ -16,7 +17,8 @@
       showcaption: Boolean,
       showtitle: Boolean,
       showbutton: Boolean,
-      buttonstring: String
+      buttononestring: String,
+      buttontwostring: String
     },
     methods: {
       setActive (idx) {
