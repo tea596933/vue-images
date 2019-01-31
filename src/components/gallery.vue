@@ -47,6 +47,7 @@
         border-radius: 2px
         cursor: pointer
         overflow: hidden
+        margin:auto
       span
         display: inline-block
         font-size: 14px
@@ -58,4 +59,6 @@
             color: #888
       input
         font-size: 14px
+      .caption
+        white-space: nowrap
 </style>

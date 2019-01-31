@@ -16,7 +16,7 @@ new Vue({
         },
         {
           imageUrl: 'https://images.unsplash.com/photo-1455717974081-0436a066bb96?dpr=2&auto=format&w=1024',
-          caption: '<b>Photo</b> by 2'
+          caption: '<b>Photo</b> by 2 (so long~)'
         },
         {
           imageUrl: 'https://images.unsplash.com/photo-1460899960812-f6ee1ecaf117?dpr=2&auto=format&w=1024',
