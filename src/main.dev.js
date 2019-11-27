@@ -6,7 +6,7 @@ import lightbox from './lightbox'
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  template: '<lightbox :imgs="images" :modalclose="modalclose" :keyinput="keyinput" :mousescroll="mousescroll" :showclosebutton="showclosebutton" :showcaption="showcaption" :imagecountseparator="imagecountseparator" :showimagecount="showimagecount" :showthumbnails="showthumbnails" :showbutton="showbutton" :buttononestring="buttononestring" :buttontwostring="buttontwostring" @buttononefunction="buttononefunction" @buttontwofunction="buttontwofunction"/>',
+  template: '<lightbox :imgs="images" :modalclose="modalclose" :keyinput="keyinput" :mousescroll="mousescroll" :showclosebutton="showclosebutton" :showcaption="showcaption" :imagecountseparator="imagecountseparator" :showimagecount="showimagecount" :showthumbnails="showthumbnails" :showbuttonone="showbuttonone" :showbuttontwo="showbuttontwo" :buttononestring="buttononestring" :buttontwostring="buttontwostring" @buttononefunction="buttononefunction" @buttontwofunction="buttontwofunction"/>',
   data () {
     return {
       images: [
@@ -59,7 +59,8 @@ new Vue({
       imagecountseparator: 'of',
       showimagecount: true,
       showthumbnails: true,
-      showbutton: true,
+      showbuttonone: true,
+      showbuttontwo: false,
       buttononestring: 'haha1',
       buttontwostring: 'haha2'
     }
